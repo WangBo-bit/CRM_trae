@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xindongli.crm.system.mapper.CustomerMapper">
+
+    <!-- 根据客户编码查询客户 -->
+    <select id="selectByCustomerCode" resultType="com.xindongli.crm.system.entity.Customer">
+        SELECT *
+        FROM crm_customer
+        WHERE customer_code = #{customerCode}
+          AND deleted = 0
+        LIMIT 1
+    </select>
+
+    <!-- 根据企业名称查询客户 -->
+    <select id="selectByCompanyName" resultType="com.xindongli.crm.system.entity.Customer">
+        SELECT *
+        FROM crm_customer
+        WHERE company_name = #{companyName}
+          AND deleted = 0
+        LIMIT 1
+    </select>
+
+</mapper>

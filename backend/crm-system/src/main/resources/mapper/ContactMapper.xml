@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xindongli.crm.system.mapper.ContactMapper">
+
+    <!-- 根据客户ID查询联系人列表 -->
+    <select id="selectByCustomerId" resultType="com.xindongli.crm.system.entity.Contact">
+        SELECT *
+        FROM crm_contact
+        WHERE customer_id = #{customerId}
+          AND deleted = 0
+        ORDER BY is_primary DESC, create_time DESC
+    </select>
+
+    <!-- 根据客户ID查询主要联系人 -->
+    <select id="selectPrimaryContactByCustomerId" resultType="com.xindongli.crm.system.entity.Contact">
+        SELECT *
+        FROM crm_contact
+        WHERE customer_id = #{customerId}
+          AND is_primary = 1
+          AND deleted = 0
+        LIMIT 1
+    </select>
+
+</mapper>

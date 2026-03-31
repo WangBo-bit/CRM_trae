@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xindongli.crm.system.mapper.UserRoleMapper">
+
+    <!-- 根据用户ID删除用户角色关联 -->
+    <delete id="deleteByUserId">
+        DELETE FROM sys_user_role
+        WHERE user_id = #{userId}
+    </delete>
+
+    <!-- 根据角色ID删除用户角色关联 -->
+    <delete id="deleteByRoleId">
+        DELETE FROM sys_user_role
+        WHERE role_id = #{roleId}
+    </delete>
+
+    <!-- 批量插入用户角色关联 -->
+    <insert id="batchInsert">
+        INSERT INTO sys_user_role (id, user_id, role_id, created_time)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (UUID(), #{item.userId}, #{item.roleId}, #{item.createdTime})
+        </foreach>
+    </insert>
+
+</mapper>

@@ -1,0 +1,117 @@
+// CSS变量定义
+:root {
+  /* 主色 */
+  --color-primary: #1E40AF;
+  --color-primary-light: #3B82F6;
+  --color-primary-lighter: #60A5FA;
+  --color-primary-lightest: #DBEAFE;
+  --color-primary-dark: #1E3A8A;
+  
+  /* 辅助色 */
+  --color-tech-blue: #0EA5E9;
+  --color-innovation-purple: #8B5CF6;
+  --color-intelligence-cyan: #06B6D4;
+  --color-data-green: #10B981;
+  
+  /* 功能色 */
+  --color-success: #10B981;
+  --color-success-light: #D1FAE5;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FEF3C7;
+  --color-error: #EF4444;
+  --color-error-light: #FEE2E2;
+  --color-info: #3B82F6;
+  --color-info-light: #DBEAFE;
+  
+  /* 中性色 */
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-text-tertiary: #6B7280;
+  --color-text-disabled: #9CA3AF;
+  --color-border-primary: #D1D5DB;
+  --color-border-secondary: #E5E7EB;
+  --color-bg-primary: #F9FAFB;
+  --color-bg-secondary: #F3F4F6;
+  --color-bg-tertiary: #E5E7EB;
+  --color-bg-white: #FFFFFF;
+  
+  /* 字号 */
+  --font-size-h1: 32px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --font-size-h4: 18px;
+  --font-size-h5: 16px;
+  --font-size-body-lg: 16px;
+  --font-size-body: 14px;
+  --font-size-body-sm: 13px;
+  --font-size-caption: 12px;
+  
+  /* 行高 */
+  --line-height-h1: 40px;
+  --line-height-h2: 32px;
+  --line-height-h3: 28px;
+  --line-height-h4: 24px;
+  --line-height-h5: 24px;
+  --line-height-body-lg: 24px;
+  --line-height-body: 21px;
+  --line-height-body-sm: 20px;
+  --line-height-caption: 18px;
+  
+  /* 字重 */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+  --spacing-4xl: 64px;
+  
+  /* 页面边距 */
+  --page-padding: 24px;
+  
+  /* 卡片内间距 */
+  --card-padding: 20px;
+  --card-padding-compact: 16px;
+  --card-padding-loose: 24px;
+  
+  /* 表单项间距 */
+  --form-item-gap: 24px;
+  
+  /* 按钮间距 */
+  --button-gap: 12px;
+  
+  /* 边框圆角 */
+  --border-radius-base: 4px;
+  --border-radius-small: 2px;
+  --border-radius-large: 8px;
+  
+  /* 阴影 */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-dialog: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* 暗色模式 */
+[data-theme='dark'] {
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #D1D5DB;
+  --color-text-tertiary: #9CA3AF;
+  --color-text-disabled: #6B7280;
+  --color-border-primary: #374151;
+  --color-border-secondary: #4B5563;
+  --color-bg-primary: #111827;
+  --color-bg-secondary: #1F2937;
+  --color-bg-tertiary: #374151;
+  --color-bg-white: #1F2937;
+  --color-primary: #3B82F6;
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+  --color-error: #F87171;
+}
